@@ -125,3 +125,4 @@ console.log(abac(1,2))
 //   TRUTHY AND FALSY VAlue
 //  false,0,-0,BigInt 0n,"",null,undefined,NaN
 // the rest are truthy but "0"is also truthy, 'false', " ",[],{},function(){}  
+// 
