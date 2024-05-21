@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .main {
+            display: grid;
+            justify-content: center;
+            gap: 10px;
+            /* i can name the columns as i want as below adn set their width*/
+            grid-template-columns:[first-column-line] 1fr [second-column-line] 2fr [third-column-line] 1fr ;
+            grid-template-rows:[first-row-line] 100px [second-row-line] 100px [third-row-line] 100px [fourth-row-line];
+            border: 1px solid red;
+            padding: 10px;
+            
+        }
+        .item{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        .item-4{
+
+            /* there two ways to shift my content in the desired column. lets say
+             i want to align item4 in place of item3*/
+
+            /*grid-row: 2/3;
+            grid-column: 1/2;*/
+
+            /* OR*/
+             /*grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;*/
+            /* OR i can use names instead of numbers to make it understanable*/
+            grid-row:second-row-line/third-row-line ;
+            grid-column:first-column-line/ second-column-line;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

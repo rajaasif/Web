@@ -1,0 +1,158 @@
+ * {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url(headerbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 40rem;
+        box-shadow: 1px 58px 160px -42px rgba(0, 0, 0, 1) inset;
+        -webkit-box-shadow: 1px 58px 160px -42px rgba(0, 0, 0, 1) inset;
+        -moz-box-shadow: 1px 58px 160px -42px rgba(0, 0, 0, 1) inset;
+      }
+      nav{
+        height: 90px;
+      }
+      svg {
+        width: 9.25rem;
+        height: 2.5rem;
+        color: rgb(229, 9, 20);
+        fill: currentColor;
+        display: block;
+        min-width: 100px;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        height: 90px;
+      }
+      .navbar button {
+        -webkit-transition: inherit;
+        transition: inherit;
+        border-style: solid;
+        border-width: 0.0625rem;
+        border-radius: 0.1875rem;
+        white-space: nowrap;
+        content: "";
+        background-color: rgb(229, 9, 20);
+        font-family: serif;
+        font-weight: 10px;
+        color: white;
+        border-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        height: 2rem;
+        width: 5.3125rem;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto,Ubuntu, sans-serif;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .main h1 {
+        font-size: 3rem;
+        font-weight: 900;
+      }
+      .main p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 1rem 0 0;
+      }
+      .submit-form h3 {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        margin: 1rem 0 0;
+      }
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0 0;
+      }
+      .form button {
+        align-items: center;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: center;
+        letter-spacing: normal;
+        line-height: 1;
+        user-select: none;
+        border: 0px;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+        vertical-align: text-top;
+        width: auto;
+        font-size: 1.5rem;
+        font-weight: 500;
+        min-height: 3.5rem;
+        padding: 0.75rem 1.5rem;
+        background: rgb(229, 9, 20);
+        color: rgb(255, 255, 255);
+      }
+      .form input {
+        padding: 1rem 1rem;
+        margin: 0px;
+        border: 0px;
+        font-size: 1.4rem;
+        border-radius: 0.25rem;
+        width: auto;
+        vertical-align: text-top;
+      }
+      @media only screen and (max-width: 375px) {
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        svg {
+          width: 5.3125rem;
+          height: 1.875rem;
+        }
+        .navbar button {
+          height: 2rem;
+          width: 5.3125rem;
+        }
+          .form input {
+        padding: 1rem 1rem;
+        margin: 5px;
+        border: 0px;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        width: 200px;
+        vertical-align: text-top;
+      }
+      .form button{
+        height: 2rem;
+          width: 150px;
+        }
+      }
+      
+      @media only screen and (max-width: 229px) {
+        .navbar {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 10px;
+        }
+        svg {
+          height: 1.5rem;
+          width: 3rem;
+        }
+      }

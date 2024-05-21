@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <style>
+        .box{
+            display: grid;
+            grid-template-areas: "nav nav nav" "aside article article" "footer footer footer";
+            border: 1px solid black;
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+            /*justify content and align content is used to align the grid within the container and align item and content is used with the grid */
+        }
+        .item1{
+            
+            grid-area: nav;
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+        .item2{
+            grid-area: aside;
+            background-color: antiquewhite;
+            width: 100px;
+            height: 100px;
+
+        }
+        .item3{
+            grid-area: article;
+            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+        }
+        .item4{
+            grid-area: footer;
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+</body>
+</html>

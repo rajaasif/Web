@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            row-gap: 10px;
+            width: 700px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 10px;
+            column-gap: 10px;
+        }
+        .box{
+            border: 1px solid red;
+            text-align: center;
+            height: 150px;
+            background-color: rgb(232, 237, 241);
+            max-width: 50vw;
+        }
+        .box button{
+            border: none;
+            width: auto;
+            height: 40px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .box ._32bit{
+            background-color: lightgreen;
+        }
+        .box ._64bit{
+            background-color: rgb(89, 140, 235);
+        }
+.btn{
+    display: flex;
+}
+
+@keyframes myAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-100px);
+        scale: 1.1;
+    }   
+    
+}
+
+        
+          @media only screen and (max-width: 960px) and (min-width: 620px) {
+            .container{
+                grid-template-columns: 1fr 1fr;
+            }
+            
+        }
+        @media only screen and (max-width: 621px) {
+            .container{
+                grid-template-columns: 1fr;
+            }
+            .box{
+                max-width: 50%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="box box1">
+        <h3>English</h3>
+         <div class="btn">
+        <button class="_32bit">Download 32-bit</button>
+        <button class="_64bit">Download 64-bit</button>
+        </div>
+    </div>
+    <div class="box box2">
+        <h3>Deutsch</h3>
+         <div class="btn">
+        <button class="_32bit">Download 32-bit</button>
+        <button class="_64bit">Download 64-bit</button>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Italiano</h3>
+        <div class="btn">
+        <button class="_32bit">Download 32-bit</button>
+        <button class="_64bit">Download 64-bit</button>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Espanol</h3>
+         <div class="btn">
+        <button class="_32bit">Download 32-bit</button>
+        <button class="_64bit">Download 64-bit</button>
+        </div>
+    </div>
+    <div class="box">
+        <h3>francias</h3>
+         <div class="btn">
+        <button class="_32bit">Download 32-bit</button>
+        <button class="_64bit">Download 64-bit</button>
+        </div>
+    </div>
+    <div class="box">
+        <h3>portuguese</h3>
+        <div class="btn">
+        <button class="_32bit">Download 32-bit</button>
+        <button class="_64bit">Download 64-bit</button>
+        </div>
+    </div>
+   </div> 
+</body>
+</html>

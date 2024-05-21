@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+     
+      body {
+        background-color: rgb(240, 195, 195);
+        position: absolute;
+      }
+      .links{
+        display: none;
+      }
+        .container {
+            display: none;
+        }
+        
+        .menu{
+            display: none;
+        }
+        .close{
+            display: none;
+        }
+      
+      
+      @media only screen and (max-width: 775px) {
+        .menu {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 0;
+            grid-row: 1/2;
+            grid-column: 1/2;
+            background-color: #0d8d6d;
+            border: none;
+            padding: 5px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            margin-left: 5px;
+            animation: menufadeout 1s ease-in-out 0s normal;
+        }
+        .close {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            grid-row: 1/2;
+            grid-column: 1/2;
+            background-color: #0d8d6d;
+            border: none;
+            padding: 5px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            margin-left: 65px;
+            animation: closebtnanimation 1s ease-in-out 0s normal;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-left: -60px;
+          width: 50px;
+          gap: 10px;
+          position: fixed;
+          animation: fadeOut 1s ease-in-out 0s normal;
+          height: 100%;
+        }
+        .myclass {
+          margin-left: 10px;
+          animation: fadeIn 1s ease-in-out 0s normal;
+            
+        }
+        .links button {
+          background-image: url(home.png);
+          object-fit: cover;
+          background-position: center top;
+          background-repeat: no-repeat;
+          background-size: 30px;
+          width: 40px;
+          height: 40px;
+          border: none;
+          border-radius: 50px;
+          box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+          font-size: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 10px;
+          font-weight: 800;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            padding: 10px;
+            width: 150px;
+            height: auto;
+            background-color: rgb(138, 91, 91);
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .form button{
+              background-color: #0d8d6d;
+                color: #ffffff;
+                font-size: 0.5em;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                height: 30px;
+                width: 50px;
+                margin: 10px;
+        }
+        .form input{
+          width: 120px;
+          padding: 5px;
+          background-color: aliceblue;
+        }
+        .changeColor{
+          background-color: blue;
+          color: white;
+        }
+        @keyframes fadeIn {
+    0% {
+        transform: translate(-100px,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+  @keyframes fadeOut {
+    0% {
+        transform: translate(70px,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+  @keyframes menufadeout {
+    0% {
+        transform: translate(60px,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+ @keyframes closebtnanimation {
+    0% {
+        transform: translate(-60px,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+       
+      }
+    </style>
+  </head>
+  <body>
+      <div class="links">
+        <button href="#" class="item1" data="liability"><p>Home</p>
+        </button>
+        <button href="#" class="item2" data="home"><p>Home</p>
+        </button>
+        <button href="#" class="item3" data="travel"><p>Home</p>
+        </button>
+        <button href="#" class="item4" data="judiciary"><p>Home</p>
+        </button>
+        <button href="#" class="item5" data="car" ><p>Home</p>
+        </button>
+        <button href="#" class="item6" data="accident"><p>Home</p>
+        </button>
+      </div>
+      <div class="container">
+          <div class="form">
+              <input type="text" placeholder=" " name="search" />
+              <button type="submit">Submit</button>
+            </div>
+        </div>
+        <button class="menu" onclick="myFunction(this)">
+          <span>Menu</span>
+        </button>
+        <button class="close" onclick="myFunction(this)">
+          <span>close</span>
+        </button>
+      
+    
+  </body>
+  <script>
+    const list1 = ["liability", "home", "travel", "car"];
+    const list2 = document.querySelectorAll(".links button");
+    const mydiv = document.querySelector(".links");
+    const menubtn = document.querySelector(".menu");
+    const closebtn = document.querySelector(".close");
+    let lastClickedIndex = -1; 
+    list2.forEach((button, indexA) => {
+      const dataValue = button.getAttribute("data");
+      console.log(dataValue)
+      if (list1.includes(dataValue)) {
+        button.style.backgroundColor = "#bfbfce";
+      }
+      
+      // Add click event listener to each button
+    });
+   console.log(list2)
+    function myFunction(btn) {
+      mydiv.classList.toggle("myclass");
+      if (btn.classList.contains("menu")) {
+        menubtn.style.display = "none";
+        closebtn.style.display = "block";
+      } else if (btn.classList.contains("close")) {
+        menubtn.style.display = "block";
+        closebtn.style.display = "none";
+      }
+    }
+
+    // Change background color of buttons matching data attribute with list1
+
+    // Add click event listener to the submit button
+    document.querySelector(".form button").addEventListener("click", function () {
+      const menuButtons = document.querySelectorAll(".links button");
+      // Change the background color of the last clicked menu item button to green
+      if (lastClickedIndex !== -1) {
+        menuButtons[lastClickedIndex].style.backgroundColor = "green";
+      }
+    });
+
+
+</script>
+</html>
